@@ -8,6 +8,10 @@ function displayResults(responseJson, user) {
   if ($('.userhead').show()) {
     $('.userhead').empty();  
     }
+  if (!$('#results').hasClass('hidden')) {
+    $('#results').addClass('hidden');
+   };
+
   // iterate through the repos array
   if (responseJson.length === 0) {
     $('#js-error-message').text(`${user} has no repos`);
